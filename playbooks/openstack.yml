@@ -138,6 +138,10 @@
       tags:
         - manila
 
+    - role: masakari
+      tags:
+        - masakari
+
     - role: horizon
       tags:
         - horizon

@@ -23,7 +23,7 @@ _masakari_helm_values:
   conf:
     masakari:
       DEFAULT:
-        log_config_append: null
+        # log_config_append: null
         masakari_api_workers: 8
       cors:
         allowed_origins: "*"

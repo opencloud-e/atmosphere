@@ -96,6 +96,21 @@
     owner: root
   notify: Restart corosync
 
+- name: Creates log directory
+  ansible.builtin.file:
+    path: /var/log/corosync
+    state: directory
+    mode: "0775"
+  when: pacemaker_corosync_use_logfile | bool
+
+- name: Adds logrotate config for corosync
+  ansible.builtin.template:
+    src: corosync_logrotate.conf.j2
+    dest: /etc/logrotate.d/corosync
+    mode: "0644"
+    owner: root
+  when: pacemaker_corosync_use_logfile | bool
+
 - name: Ensure Corosync service directory exists
   become: true
   ansible.builtin.file:

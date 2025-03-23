@@ -137,6 +137,7 @@ _atmosphere_images:
   manila_scheduler: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
   manila_share: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
   masakari_api: "docker.io/openstackhelm/masakari:{{ atmosphere_release }}-ubuntu_jammy"
+  masakari_db_sync: "docker.io/openstackhelm/masakari:{{ atmosphere_release }}-ubuntu_jammy"
   masakari_engine: "docker.io/openstackhelm/masakari:{{ atmosphere_release }}-ubuntu_jammy"
   masakari_host_monitor: "docker.io/openstackhelm/masakari-monitors:{{ atmosphere_release }}-ubuntu_jammy"
   masakari_process_monitor: "docker.io/openstackhelm/masakari-monitors:{{ atmosphere_release }}-ubuntu_jammy"

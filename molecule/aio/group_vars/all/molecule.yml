@@ -228,6 +228,17 @@ manila_helm_values:
       api: 1
       scheduler: 1
 
+masakari_helm_values:
+  conf:
+    masakari:
+      DEFAULT:
+        debug: "{{ lookup('env', 'ATMOSPHERE_DEBUG') | default('false', True) }}"
+        masakari_api_workers: 2
+  pod:
+    replicas:
+      masakari_api: 1
+      masakari_engine: 1
+
 horizon_helm_values:
   conf:
     horizon:

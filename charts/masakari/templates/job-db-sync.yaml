@@ -44,7 +44,7 @@ spec:
 {{ tuple $envAll "db_migrate" list | include "helm-toolkit.snippets.kubernetes_entrypoint_init_container" | indent 8 }}
       containers:
         - name: masakari-db-sync
-{{ tuple $envAll "magnum_db_sync" | include "helm-toolkit.snippets.image" | indent 10 }}
+{{ tuple $envAll "masakari_db_sync" | include "helm-toolkit.snippets.image" | indent 10 }}
 {{ tuple $envAll $envAll.Values.pod.resources.jobs.db_sync | include "helm-toolkit.snippets.kubernetes_resources" | indent 10 }}
 {{ dict "envAll" $envAll "application" "masakari" "container" "masakari_db_migrate" | include "helm-toolkit.snippets.kubernetes_container_security_context" | indent 10 }}
           command:

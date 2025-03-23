@@ -17,3 +17,5 @@ pacemaker_corosync_group: controllers
 pacemaker_remote_group: computes
 pacemaker_corosync_ring_interface: "{{ undef(hint='You must specify a Pacemaker Corosync ring interface') }}"
 pacemaker_remote_ring_interface: "{{ pacemaker_corosync_ring_interface }}"
+pacemaker_corosync_use_syslog: true
+pacemaker_corosync_use_logfile: false

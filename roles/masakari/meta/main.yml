@@ -38,3 +38,4 @@ dependencies:
     vars:
       upload_helm_chart_src: "{{ masakari_helm_chart_path }}"
       upload_helm_chart_dest: "{{ masakari_helm_chart_ref }}"
+  - role: pacemaker

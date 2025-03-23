@@ -12,6 +12,7 @@ ceph_conf_overrides:
     value: false
 
 kubernetes_keepalived_interface: br-mgmt
+pacemaker_corosync_ring_interface: br-mgmt
 
 cilium_helm_values:
   operator:

@@ -31,7 +31,9 @@
   ansible.builtin.package:
     name: pacemaker-remote
     state: present
-  when: inventory_hostname in groups[pacemaker_remote_group]
+  when:
+    - inventory_hostname not in groups[pacemaker_corosync_group]
+    - inventory_hostname in groups[pacemaker_remote_group]
 
 - name: Generate Corosync authkey (only on first node)
   become: true
